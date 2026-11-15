@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f3">
+  <meta name="description" content="A calm, simple to-do list to help you focus on what matters.">
+  <title>Daymark — a little more intentional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Daymark home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>daymark</a>
+      <span class="today-label"><span class="status-dot" aria-hidden="true"></span> YOUR PERSONAL SPACE</span>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow"><span class="eyebrow-line"></span> A LITTLE MORE INTENTIONAL</p>
+      <h1 id="page-title">Make room for<br><span>what matters.</span></h1>
+      <p class="hero-copy">One step at a time. Your day, at your pace.</p>
+    </section>
+
+    <section class="todo-card" aria-labelledby="list-title">
+      <div class="list-heading">
+        <div>
+          <p class="section-kicker">YOUR DAY, UNCLUTTERED</p>
+          <h2 id="list-title">The list<span class="heading-period">.</span></h2>
+        </div>
+        <div class="count-pill" aria-live="polite"><span id="task-count">0</span><span id="count-label"> left</span></div>
+      </div>
+
+      <form id="task-form" class="task-form" novalidate>
+        <label class="sr-only" for="task-input">What would you like to get done?</label>
+        <span class="input-plus" aria-hidden="true">+</span>
+        <input id="task-input" name="task" type="text" maxlength="180" placeholder="What would you like to get done?" autocomplete="off" aria-describedby="form-error">
+        <button class="add-button" type="submit"><span>Add task</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+      </form>
+      <p id="form-error" class="form-error" role="alert" aria-live="assertive"></p>
+
+      <div class="list-divider"><span>YOUR TASKS</span><span class="divider-rule"></span></div>
+      <ul id="task-list" class="task-list" aria-label="Your tasks"></ul>
+      <div id="empty-state" class="empty-state" hidden>
+        <div class="empty-illustration" aria-hidden="true"><span class="empty-sun"></span><span class="empty-page"><i></i><i></i><i></i></span></div>
+        <p class="empty-title">A fresh start.</p>
+        <p class="empty-copy">No tasks yet. Add your first task!</p>
+      </div>
+      <div class="card-footer"><span class="footer-sparkle" aria-hidden="true">✳</span><span>Small steps still move you forward.</span><span class="footer-line"></span></div>
+    </section>
+
+    <footer class="page-footer"><span>MADE FOR YOUR EVERYDAY</span><span>TAKE IT ONE THING AT A TIME</span></footer>
+  </main>
+</body>
+</html>
